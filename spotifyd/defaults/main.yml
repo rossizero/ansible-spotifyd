@@ -4,4 +4,4 @@ os: linux-aarch64
 spotify_device_name: ansible spotifyd
 spotify_backend: alsa
 spotify_device: hw:2,0 ### find with aplay -l
-spotify_volume_controller: softvol
+spotify_volume_controller: soft-volume  ### alsa, alsa-linear, soft-volume, none

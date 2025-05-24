@@ -3,3 +3,4 @@
 user: pi 
 spotifyd_version: 0.4.1
 os: linux-aarch64
+spotify_device_name: ansible spotifyd

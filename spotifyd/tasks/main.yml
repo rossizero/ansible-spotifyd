@@ -40,7 +40,13 @@
 
 
       [Service]
-      ExecStart=/usr/local/bin/spotifyd --no-daemon --verbose -d "{{ spotify_device_name }}"
+      ExecStart=/usr/local/bin/spotifyd \
+        --no-daemon \
+        --backend {{ spotify_backend }} \
+        --device {{ spotify_device }} \
+        --volume-controller {{ spotify_volume_controller }}
+        --verbose 
+        -d "{{ spotify_device_name }}"
       Restart=always
       User={{ user }}
       Group={{ user }}

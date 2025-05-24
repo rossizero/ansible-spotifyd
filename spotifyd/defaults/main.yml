@@ -2,3 +2,6 @@ user: pi
 spotifyd_version: 0.4.1
 os: linux-aarch64
 spotify_device_name: ansible spotifyd
+spotify_backend: alsa
+spotify_device: hw:2,0 ### find with aplay -l
+spotify_volume_controller: softvol

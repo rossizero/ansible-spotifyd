@@ -37,7 +37,7 @@
       After=network.target sound.target
 
       [Service]
-      ExecStart=/usr/local/bin/spotifyd --no-daemon --verbose -d {{ spotify_device_name }}
+      ExecStart=/usr/local/bin/spotifyd --no-daemon --verbose -d "{{ spotify_device_name }}"
       Restart=always
       User={{ user }}
       Group={{ user }}

@@ -7,7 +7,7 @@
 
 - name: Download spotifyd binary
   get_url:
-    url: https://github.com/Spotifyd/spotifyd/releases/download/v{{ 0.4.1 }}/spotifyd-{{ os }}-slim.tar.gz
+    url: https://github.com/Spotifyd/spotifyd/releases/download/v{{ spotifyd_version }}/spotifyd-{{ os }}-slim.tar.gz
     dest: /tmp/spotifyd.tar.gz
     mode: '0644'
   become: true

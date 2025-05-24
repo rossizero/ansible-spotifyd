@@ -34,14 +34,19 @@
     content: |
       [Unit]
       Description=Spotifyd daemon
-      After=network.target sound.target
+      Documentation=https://github.com/Spotifyd/spotifyd
+      Wants=network-online.target sound.target
+      After=network-online.target sound.target
+
 
       [Service]
       ExecStart=/usr/local/bin/spotifyd --no-daemon --verbose -d "{{ spotify_device_name }}"
       Restart=always
       User={{ user }}
       Group={{ user }}
-      Environment=PATH=/usr/local/bin:/usr/bin:/bin
+      ProtectSystem=full
+      ProtectHome=no
+      PrivateTmp=false
 
       [Install]
       WantedBy=multi-user.target

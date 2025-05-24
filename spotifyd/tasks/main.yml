@@ -44,8 +44,8 @@
         --no-daemon \
         --backend {{ spotify_backend }} \
         --device {{ spotify_device }} \
-        --volume-controller {{ spotify_volume_controller }}
-        --verbose 
+        --volume-controller {{ spotify_volume_controller }} \
+        --verbose \
         -d "{{ spotify_device_name }}"
       Restart=always
       User={{ user }}
